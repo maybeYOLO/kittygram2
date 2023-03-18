@@ -1,0 +1,38 @@
+POST  http://127.0.0.1:8000/auth/jwt/create/
+Content-Type: application/json
+
+{
+    "username": "user2",
+    "password": "user2user2"
+}
+###
+
+GET http://127.0.0.1:8000/auth/users/me/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MjIyMTY3LCJqdGkiOiIxNWRhODI3OWY3NGU0OGNmYWVmODZjN2JhZTUxN2JhYSIsInVzZXJfaWQiOjF9.1J2LQ1ZoKCQG9qPVJkzRZxUWiabywSLcJGFX7zsm0Qo
+
+###
+GET http://127.0.0.1:8000/users/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MjIyMTY3LCJqdGkiOiIxNWRhODI3OWY3NGU0OGNmYWVmODZjN2JhZTUxN2JhYSIsInVzZXJfaWQiOjF9.1J2LQ1ZoKCQG9qPVJkzRZxUWiabywSLcJGFX7zsm0Qo
+###
+POST http://127.0.0.1:8000/auth/users/
+Content-Type: application/json
+
+{
+    "username": "user2",
+    "email": "user2@mail.ru",
+    "password": "user2user2"
+}
+###
+
+POST http://127.0.0.1:8000/cats/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MjIzODI3LCJqdGkiOiIxMjE3MzM1YzUyNGY0YWU2YWNkYmU2ODQzN2QzYzNiOSIsInVzZXJfaWQiOjJ9.nUAr2K5E0AciabEAU9h9L8YwWsSCVLOHVt_KQ2zFS-Q
+Content-Type: application/json
+
+{
+    "name": "Степан",
+    "color": "Black",
+    "birth_year": 20
+}
+###
+DELETE http://127.0.0.1:8000/cats/3/
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjc5MjIzODI3LCJqdGkiOiIxMjE3MzM1YzUyNGY0YWU2YWNkYmU2ODQzN2QzYzNiOSIsInVzZXJfaWQiOjJ9.nUAr2K5E0AciabEAU9h9L8YwWsSCVLOHVt_KQ2zFS-Q
